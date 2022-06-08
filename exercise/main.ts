@@ -1,5 +1,5 @@
 import createClub from './create';
-import { findAll } from './search';
+import { findAll, findByText, findOne } from './search';
 
 const main = (): any => {
   const msg = createClub(3, 'Boca Jrs');
@@ -7,6 +7,10 @@ const main = (): any => {
   console.log(msg);
   const res = findAll();
   console.log(res);
+  const filter = findByText('a');
+  console.log(filter);
+  const find = findOne(4);
+  console.log(find);
 };
 
 main();
